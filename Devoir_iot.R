@@ -13,8 +13,14 @@ sample = sample.split(mydata,SplitRatio=0.8)
 Train_data = mydata[sample==TRUE, ]
 Test_data = mydata[sample==FALSE, ]
 #construire notre modele
-modele = lm(Train_data$Salary~Train_data$YearsExperience, data = Train_data)
+a <- Train_data$YearsExperience
+b <- Train_data$Salary
+modele = lm(b~a, data = Train_data)
 # Show attributes of linModel
 attributes(modele)
 #exemple de prediction
-predict(modele, data.frame(YearsExperience = 1.1))
+predict(modele, data.frame(a = 2.0))
+vector1 =  c (2.0, 1.3, 1.5,2.2)
+vector2 = predict(modele, data.frame(a = Test_data$YearsExperience))
+library(Metrics)
+rmse(Test_data$Salary,vector2)
