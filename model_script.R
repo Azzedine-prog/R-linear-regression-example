@@ -1,8 +1,7 @@
 #***************************************************************
-#*Binome : 
+#*People involved : 
 #*         - AZZEDINE LAKHDAR
 #*         - YOUSSEF QAISSOUMI
-#*Projet : PLATEFORME ET TECHNOLOGIE DE L'IOT
 #*
 #* année : 2020/2021
 #***************************************************************
